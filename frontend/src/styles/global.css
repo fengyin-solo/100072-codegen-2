@@ -33,3 +33,65 @@ body { margin: 0; background: #f6f8fb; color: #1f2937; }
 .link { border: none; background: none; color: var(--brand); cursor: pointer; padding: 0; }
 .page-foot { display: flex; justify-content: space-between; margin-top: 8px; font-size: 12px; color: var(--muted); }
 .error-text { color: #b42318; }
+.success-text { color: #067647; }
+
+/* 顶部操作人切换 */
+.operator-select { border: 1px solid var(--border); border-radius: 6px; padding: 2px 6px; font-size: 12px; }
+
+/* 状态徽标 */
+.badge { display: inline-block; border-radius: 10px; padding: 1px 10px; font-size: 12px; border: 1px solid transparent; white-space: nowrap; }
+.badge-pending { background: #f2f4f7; color: #475467; border-color: #d0d5dd; }
+.badge-doing { background: #eff8ff; color: #175cd3; border-color: #b2ddff; }
+.badge-receipt { background: #fffaeb; color: #b54708; border-color: #fedf89; }
+.badge-closed { background: #ecfdf3; color: #067647; border-color: #abefc6; }
+.badge-warn { background: #fef3f2; color: #b42318; border-color: #fda29b; }
+.badge-mini { border-radius: 8px; padding: 0 8px; font-size: 11px; margin-left: 6px; }
+
+/* 派发看板 */
+.board { display: grid; grid-template-columns: repeat(4, minmax(220px, 1fr)); gap: 12px; align-items: start; }
+.board-column { background: #eef2f7; border: 1px solid var(--border); border-radius: 8px; padding: 8px; min-height: 120px; }
+.board-column.blocked-col { background: #fef3f2; border-color: #fda29b; }
+.board-head { display: flex; justify-content: space-between; align-items: center; font-size: 13px; font-weight: 600; margin-bottom: 8px; }
+.board-count { background: #fff; border: 1px solid var(--border); border-radius: 10px; padding: 0 8px; font-size: 12px; }
+.board-card { background: #fff; border: 1px solid var(--border); border-radius: 8px; padding: 8px 10px; margin-bottom: 8px; cursor: pointer; }
+.board-card.blocked { border-color: #fda29b; background: #fffbfa; }
+.board-card-title { font-size: 13px; font-weight: 600; }
+.board-card-meta { font-size: 12px; color: var(--muted); margin-top: 4px; }
+.card-actions { display: flex; flex-wrap: wrap; gap: 6px 12px; margin-top: 6px; }
+
+/* 路线分组 */
+.route-group { background: #fff; border: 1px solid var(--border); border-radius: 8px; margin-bottom: 12px; }
+.route-group.blocked { border-color: #fda29b; background: #fffbfa; }
+.route-head { display: flex; justify-content: space-between; align-items: center; padding: 8px 12px; border-bottom: 1px solid var(--border); font-size: 13px; font-weight: 600; }
+.route-body { padding: 4px 12px 8px; }
+.route-body .data-table th, .route-body .data-table td { font-size: 12px; padding: 6px 8px; }
+
+/* 弹窗 */
+.modal-mask { position: fixed; inset: 0; background: rgba(16, 24, 40, 0.45); display: flex; align-items: center; justify-content: center; z-index: 50; }
+.modal { background: #fff; border-radius: 10px; width: 520px; max-width: calc(100vw - 32px); max-height: 86vh; overflow-y: auto; padding: 18px 20px; }
+.modal.wide { width: 640px; }
+.modal-head { display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; }
+.modal-title { margin: 0; font-size: 15px; }
+.modal-close { border: none; background: none; font-size: 18px; cursor: pointer; color: var(--muted); }
+.form-field { margin-bottom: 12px; }
+.form-field label { display: block; font-size: 12px; color: var(--muted); margin-bottom: 4px; }
+.form-field input, .form-field textarea, .form-field select { width: 100%; border: 1px solid var(--border); border-radius: 6px; padding: 6px 8px; font-size: 13px; font-family: inherit; }
+.form-field textarea { min-height: 64px; resize: vertical; }
+.form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0 12px; }
+.modal-foot { display: flex; justify-content: flex-end; gap: 8px; margin-top: 8px; }
+.detail-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 6px 16px; font-size: 13px; margin-bottom: 12px; }
+.detail-grid dt { color: var(--muted); font-size: 12px; }
+.detail-grid dd { margin: 0 0 6px; }
+
+/* 流转时间线 */
+.timeline { list-style: none; margin: 0; padding: 0; }
+.timeline li { position: relative; padding: 0 0 14px 18px; border-left: 2px solid var(--border); }
+.timeline li:last-child { border-left-color: transparent; padding-bottom: 0; }
+.timeline li::before { content: ''; position: absolute; left: -6px; top: 2px; width: 10px; height: 10px; border-radius: 50%; background: var(--brand); }
+.timeline li.is-return::before { background: #b42318; }
+.timeline-time { font-size: 12px; color: var(--muted); }
+.timeline-action { font-size: 13px; font-weight: 600; margin: 0 6px; }
+.timeline-reason { font-size: 12px; color: #b42318; margin-top: 2px; }
+.timeline-note { font-size: 12px; color: var(--muted); margin-top: 2px; }
+
+.inline-form { background: #fff; border: 1px solid var(--border); border-radius: 8px; padding: 14px 16px; margin-bottom: 12px; }
